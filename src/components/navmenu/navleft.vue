@@ -1,8 +1,8 @@
 <template>
-  <div class="navleft">
+  <div class="navleft" v-bind:style="{style1:iscollapse}">
     <el-row class="tac" >
-      <el-col :span="5">
-        <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" :collapse="true">
+      <el-col >
+        <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" :collapse="iscollapse">
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-location"></i>
@@ -30,6 +30,17 @@
 </template>
 <script>
 export default {
+  data(){
+    return{
+      iscollapse:true,
+      style1:{
+        width:"64px",
+      },
+      style2:{
+        width:"200px",
+      }
+    }
+  },
   methods: {
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
@@ -43,6 +54,11 @@ export default {
 </script>
 <style>
     .navleft{
+      /*width: 200px;*/
+      position: absolute;
+      top: 61px;
+      bottom: 0;
+      background: rgb(84, 92, 100);
     }
     .el-row{/*
       position: absolute;
