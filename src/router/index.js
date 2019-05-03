@@ -9,18 +9,23 @@ export default new Router({
       path: '/',
       name: 'home',
       component: ()=>import('@/views/home'),
-      children :[
-        {
-            path:'navleft',
-            name:'navleft',
-            component:()=>import('@/components/navmenu/navleft')
-        },
-        {
-            path:'navtop',
-            name:'navtop',
-            component:()=>import('@/components/navmenu/navtop')
-        }
-      ]
+      // children :[
+      //   {
+      //       path:'navleft',
+      //       name:'navleft',
+      //       component:()=>import('@/components/navmenu/navleft')
+      //   },
+      //   {
+      //       path:'navtop',
+      //       name:'navtop',
+      //       component:()=>import('@/components/navmenu/navtop')
+      //   },
+      //   {
+      //       path:'content',
+      //       name:'content',
+      //       component:()=>import('@/components/main')
+      //   }
+      // ]
     }
   ]
 })

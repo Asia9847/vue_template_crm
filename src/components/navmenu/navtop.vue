@@ -42,12 +42,3 @@ export default {
 }
 
 </script>
-<style>
-.right-item {
-  float: left;
-}
-.el-submenu__icon-arrow{
-  position: static;
-}
-
-</style>

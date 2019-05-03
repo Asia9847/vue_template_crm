@@ -1,6 +1,6 @@
 <template>
-  <div class="app-container">
-    <el-table v-loading = "listLoading"
+    <el-table class="table"
+    v-loading = "listLoading"
     :data = "list"
     element-loading-text="Loading"
     border
@@ -39,7 +39,6 @@
         </template>
       </el-table-column>
     </el-table>
-  </div>
 </template>
 <script>
 import { getList } from "@/api/table"
@@ -57,7 +56,8 @@ export default {
     data(){
         return {
             list:null,
-            listLoading:true
+            listLoading:true,
+            tableheight:window.innerHeight,
         }
     },
     created(){
@@ -76,3 +76,6 @@ export default {
 }
 
 </script>
+<style>
+  @import "../../styles/tables.css";
+</style>
